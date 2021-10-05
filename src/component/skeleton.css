@@ -1,0 +1,46 @@
+.avatar-skl{
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+        border: 10px solid rgb(180, 177, 177);
+        display: block;
+        margin: 40px auto 20px auto;
+        background-color: rgb(214, 210, 210);
+        animation: skeleton 2s ease infinite alternate;
+    }
+    
+    @keyframes skeleton {
+      to {
+        opacity: 0.5;
+      }
+    }
+.profile-text-skl{
+    width: 400px;
+    height: 60px;
+    background-color: rgb(214, 210, 210);
+}
+.profile-description-skl{
+    width: 500px;
+    height: 50px;
+    background-color: rgb(214, 210, 210);
+    margin-top: 10px;
+}
+.location-details-skl{
+    width: 500px;
+    height: 50px;
+    background-color: rgb(214, 210, 210);
+    margin-top: 10px;
+}
+.respo-details-skl{
+    width: 700px;
+    height: 400px;
+    background-color: rgb(214, 210, 210);
+    margin-top: 10px; 
+    animation: skeleton 2s ease infinite alternate;
+}
+
+@keyframes skeleton {
+  to {
+    opacity: 0.5;
+  }
+}

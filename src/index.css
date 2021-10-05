@@ -1,13 +1,156 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html{
+    font-size: 62.5%; /* 16px * 62.5 = 10px = 1rem */
+    box-sizing: border-box;
+  }
+  body{
+      margin: 0;
+      font-family: "Inter", sans-serif;
+  }
+  .profile{
+    border: 2px solid #000;
+    margin: 20px 0px;
+  }
+  .user-respo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+  .avatar{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    border: 10px solid rgb(180, 177, 177);
+    display: block;
+    margin: 40px auto 20px auto;
+  }
+  .profile-text {
+    font-size: 40px;
+    font-family: "Inter", sans-serif;
+    text-align: left;
+    font-weight: 600;
+    color: rgb(36, 35, 35);
+}
+  .profile-details{
+    margin-top: 80px;
+  }
+  .profile-details p{
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    text-align: left;
+    font-weight: normal;
+    color: rgb(36, 35, 35);
+    padding-top: 15px;
+
+  }
+  .location-details{
+    display: flex;
+    padding-top: 10px;
+
+  }
+  .location-details h1{
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    text-align: left;
+    font-weight: 600;
+    color: rgb(36, 35, 35);
+    padding-right: 10px;
+  }
+  .twitter-link{
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    text-align: left;
+    font-weight: bold;
+    color: rgb(36, 35, 35);
+    padding-top: 15px;
+  }
+  .respo{
+    display: flex;
+    margin: 15px 0px;
+  }
+  .respo-details{
+    display: block;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+  .respo h1{
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    text-align: left;
+    font-weight: bold;
+    color: rgb(36, 35, 35);
+    padding-right: 10px;
+  }
+  .user-respo-card h1{
+    font-size: 25px;
+    font-family: "Inter", sans-serif;
+    text-align: left;
+    font-weight: bold;
+    color: #6cb0ec;
+  }
+  .user-respo-card p{
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    text-align: left;
+    font-weight: bold;
+    color: rgb(36, 35, 35);
+    padding-top: 10px;
+  }
+  .topics{
+    display: inline-flex;
+    padding-top: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    background-color: #428BCA;
+    padding: 10px 15px;
+  }
+  .topics a{
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  }
+  .topics a:hover{
+    color: #fff;
+    }
+  .user-respo-card {
+    border: 2px solid #000;
+    width: 95%;
+    justify-content: center;
+    padding: 30px;
+    margin: 20px 28px;
+}
+.new-old{
+  display: flex;
+  justify-content: space-between;
+  width: 215px;
+  margin: 0 auto 20px auto;
+}
+.new-old li{
+  list-style-type: none;
+  text-decoration: none;
+  padding: 5px 20px;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  color: rgb(150, 148, 148);
+  border-radius: 25px;
+  border: 2px solid rgb(150, 148, 148);
+  cursor: pointer;
+}
+.new-old li:active{
+  list-style-type: none;
+  text-decoration: none;
+  padding: 5px 20px;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  color: #428BCA;
+  border-radius: 25px;
+  border: 2px solid #428BCA;
 }
