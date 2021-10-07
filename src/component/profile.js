@@ -41,10 +41,10 @@ function Profile() {
                       
                             <div className="row">   
                          
-                                <div className="col-md-4">
+                                <div className="col-lg-4">
                                     <img className="avatar" src={pf.avatar_url} alt="Avatar"></img>
                                 </div>
-                                <div className="col-md-8">
+                                <div className="col-lg-8">
                                     <div className="profile-details">
                                         <h1 className="profile-text">{pf.name}</h1>
                                         <p>{pf.bio}</p>

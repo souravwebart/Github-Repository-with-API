@@ -16,9 +16,62 @@ html{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
+    width: fit-content;
+}
+@media only screen and (max-width: 991px){
+  .user-respo {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    width: fit-content;
+}
+.respo-details {
+  display: block;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  justify-content: center!important;
+}
+.respo {
+  display: flex;
+  margin: 15px auto;
+  text-align: center;
+  justify-content: center;
+}
+.user-respo-card {
+  border: 2px solid #000;
+  width: 100% !important;
+  justify-content: center;
+  padding: 30px ;
+  margin: 10px 0px !important;
+}
+.profile-details {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  justify-content: center;
+  text-align-last: center;
+}
+.location-details {
+  display: flex;
+  padding-top: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+  .user-respo-card {
+    border: 2px solid #000;
+    width: 85% !important;
+    justify-content: center;
+    padding: 30px;
+    margin: 20px 0px !important;
+}
 }
   .avatar{
     width: 300px;
@@ -70,7 +123,7 @@ html{
   }
   .respo{
     display: flex;
-    margin: 15px 55px;
+    margin: 15px 25px;
   }
   .respo-details{
     display: block;
