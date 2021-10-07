@@ -9,6 +9,7 @@ import { faLink } from '@fortawesome/free-solid-svg-icons';
 const link = <FontAwesomeIcon icon={faLink} />
 
 const renderData = (data) => {
+
     return (
         data.map((resitem, id) => {
             return (
@@ -16,10 +17,7 @@ const renderData = (data) => {
                     <h1>{resitem.name}</h1>
                     <p>{resitem.description}</p>
                     <div className="topics">
-                        {(resitem.language === "" ?
-                            (<a href="/">No Language</a>)
-                            : (<a href="/">{resitem.language}</a>)
-                        )}
+                      <a href="/">{(resitem.language === "" ? "No not language property of the repo"  : `${resitem.language}`)}</a>
                     </div>
                 </div>
             )
@@ -72,7 +70,7 @@ function Repo() {
     });
     useEffect(() => {
         const fetchrepo = async () => {
-            const res = await axios.get('https://api.github.com/users/johnpapa/repos');
+            const res = await axios.get('https://api.github.com/users/johnpapa/repos?per_page=134');
             setData(res.data);
             console.log(res.data)
         };
