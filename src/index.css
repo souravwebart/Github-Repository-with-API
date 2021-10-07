@@ -206,10 +206,10 @@ html{
     padding: 30px;
     margin: 20px 28px;
 }
-.new-old{
+.new-old {
   display: flex;
   justify-content: space-between;
-  width: 215px;
+  width: 325px !important;
   margin: 0 auto 20px auto;
 }
 .new-old li{

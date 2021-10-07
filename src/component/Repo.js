@@ -125,7 +125,6 @@ function Repo() {
     return (
         <div className="main">
             <div className="container">
-                <div className="row">
                     <div className="respo-details">
                         <div className="respo">
                             <h1>{link}</h1>
@@ -159,7 +158,6 @@ function Repo() {
                         </ul>
                     </div>
                 </div>
-            </div>
             <div className="container">
                 <div className="row">
                     <div className="new-old">
