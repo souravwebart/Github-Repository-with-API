@@ -17,7 +17,7 @@ const renderData = (data) => {
                     <h1>{resitem.name}</h1>
                     <p>{resitem.description}</p>
                     <div className="topics">
-                      <a href="/">{(resitem.language === "" ? "No not language property of the repo"  : `${resitem.language}`)}</a>
+                        <a href="/">{(resitem.language === "" ? "No not language property of the repo" : `${resitem.language}`)}</a>
                     </div>
                 </div>
             )
@@ -49,7 +49,7 @@ function Repo() {
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
-    const totalPages  = Math.ceil(data.length / itemsPerPage);
+    const totalPages = Math.ceil(data.length / itemsPerPage);
 
 
     const renderPageNumbers = pages.map((number) => {
@@ -78,20 +78,20 @@ function Repo() {
         fetchrepo();
     }, []);
 
-const handleLastbtn = () => {
-    setcurrentPage(totalPages);
-}
+    const handleLastbtn = () => {
+        setcurrentPage(totalPages);
+    }
 
-let pageLastbtn = null;
-pageLastbtn = <li onClick={handleLastbtn}> &#8592; Older </li>;
+    let pageLastbtn = null;
+    pageLastbtn = <li onClick={handleLastbtn}> &#8592; Older </li>;
 
 
-const handleFirstbtn = () => {
-    setcurrentPage(startPage);
-}
+    const handleFirstbtn = () => {
+        setcurrentPage(startPage);
+    }
 
-let pageFirtstbtn =null;
-pageFirtstbtn = <li onClick={handleFirstbtn}> Newer &#8594; </li>;
+    let pageFirtstbtn = null;
+    pageFirtstbtn = <li onClick={handleFirstbtn}> Newer &#8594; </li>;
 
     const handleNextbtn = () => {
         setcurrentPage(currentPage + 1);
@@ -124,45 +124,49 @@ pageFirtstbtn = <li onClick={handleFirstbtn}> Newer &#8594; </li>;
 
     return (
         <div className="main">
-       <div className="container">
-       <div className="row">
-       <div className="respo-details">
-       <div className="respo">
-           <h1>{link}</h1>
-           <h1>https://github.com/johnpapa</h1>
-       </div>
-      
-       <div className="user-respo">
-           {renderData(currentItems)}
-       </div>
-       <ul className="pageNumbers">
-           <li>
-               <button
-                   onClick={handlePrevbtn}
-                   disabled={currentPage === pages[0] ? true : false}
-               >
-                   &#8810;
-               </button>
-           </li>
-           {pageDecrementBtn}
-           {renderPageNumbers}
-           {pageIncrementBtn}
+            <div className="container">
+                <div className="row">
+                    <div className="respo-details">
+                        <div className="respo">
+                            <h1>{link}</h1>
+                            <h1>https://github.com/johnpapa</h1>
+                        </div>
 
-           <li>
-               <button
-                   onClick={handleNextbtn}
-                   disabled={currentPage === pages[pages.length - 1] ? true : false}
-               >
-                   &#8811;
-               </button>
-           </li>
-       </ul>
-   </div>
-       </div>
-       </div>
-            <div className="new-old">
-            {pageLastbtn}
-            {pageFirtstbtn}
+                        <div className="user-respo">
+                            {renderData(currentItems)}
+                        </div>
+                        <ul className="pageNumbers">
+                            <li>
+                                <button
+                                    onClick={handlePrevbtn}
+                                    disabled={currentPage === pages[0] ? true : false}
+                                >
+                                    &#8810;
+                                </button>
+                            </li>
+                            {pageDecrementBtn}
+                            {renderPageNumbers}
+                            {pageIncrementBtn}
+
+                            <li>
+                                <button
+                                    onClick={handleNextbtn}
+                                    disabled={currentPage === pages[pages.length - 1] ? true : false}
+                                >
+                                    &#8811;
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div className="container">
+                <div className="row">
+                    <div className="new-old">
+                        {pageLastbtn}
+                        {pageFirtstbtn}
+                    </div>
+                </div>
             </div>
         </div>
     );
